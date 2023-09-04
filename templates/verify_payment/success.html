@@ -1,0 +1,90 @@
+{% extends 'base.html' %} 
+{% load  static %}
+{% load course_tags %}
+
+{% block content %}
+<div class="container py-8 py-lg-11">
+    <div class="row">
+        <div class="col-xl-8 mx-xl-auto">
+            <img src="{% static 'assets/img/success.png' %}" alt="..." class="rounded-circle" width="80px" class="img-fluid mx-auto d-block" >
+            <header class="entry-header mt-4">
+                <h1 class="entry-title">Order received</h1>
+                <p class="text-center"> Thank you. Your order has been recieved.</p>
+             </header>
+
+            <div class="entry-content">
+                <div class="woocommerce">
+                    <div class="woocommerce-order">
+                        <p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">Thank you. Your order has been received.</p>
+
+                        <ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
+                            <li class="woocommerce-order-overview__order order">
+                                Order ID:<br>
+                                <strong>{{payment.order_id}}</strong>
+                            </li>
+
+                            <li class="woocommerce-order-overview__date date">
+                                Date:
+                                <strong>{{payment.date}}</strong>
+                            </li>
+
+                            <li class="woocommerce-order-overview__total total">
+                                Total:<br>
+                                <strong>Rs. {{payment.course.price}}></strong>
+                            </li>
+
+                            <li class="woocommerce-order-overview__payment-method method">
+                                Payment method:<br>
+                                <strong>Check payments</strong>
+                            </li>
+                        </ul>
+
+                        <section class="woocommerce-order-details">
+                            <h2 class="woocommerce-order-details__title">Order details</h2>
+                            <table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
+                                <thead>
+                                    <tr>
+                                        <th class="woocommerce-table__product-name product-name">Course</th>
+                                        <th class="woocommerce-table__product-table product-total">Total</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="woocommerce-table__line-item order_item">
+                                        <td class="woocommerce-table__product-name product-name">
+                                            <a href="#">{{course.title}}</a>
+                                            <strong class="product-quantity">× 1</strong>
+                                        </td>
+
+                                        <td class="woocommerce-table__product-total product-total">
+                                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{i.price}}</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <th scope="row">Subtotal:</th>
+                                        <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">£</span>{{i.price}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Payment method:</th>
+                                        <td>Online payments</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Total:</th>
+                                        <td>dicount</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </section>
+
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
