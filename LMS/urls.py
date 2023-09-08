@@ -19,7 +19,7 @@ from .import views,user_login
 
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -61,4 +61,6 @@ urlpatterns = [
     
     path('course/watch-course/<slug:slug>', views.WATCH_COURSE,name='watch_course'),
 
-] + static(settings.MEDIA_URL,document_root =settings.MEDIA_ROOT)
+]
+urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL,document_root = settings.STATIC_ROOT)
