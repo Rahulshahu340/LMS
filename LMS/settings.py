@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-q9i1dpdj0o&2&7(c8bs53gfpogj4_$1*3tu(yo*c!b@2lts5vm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost','*']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -131,7 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS= os.path.join(BASE_DIR,'static'),
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build', 'static')
 
@@ -151,10 +151,10 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'seekho8coding@gmail.com'
 EMAIL_HOST_PASSWORD = 'Seekho@340'
 
-TIME_ZONE = 'Asia/Kolkata'
-
 KEY_ID = 'rzp_test_MagEsW5sfcB3g5'
 KEY_SECRET= '0fbsbSBRdxLH1NtiUWfvCKJI'
+TIME_ZONE = 'Asia/Kolkata'
+
 
 CORS_ALLOWED_ORIGINS = [
     "https://api.razorpay.com",  # Add your trusted origin(s) here
