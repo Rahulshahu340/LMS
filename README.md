@@ -1,8 +1,5 @@
-Creating a **Learning Module System** using the Django framework involves several key components. This kind of system typically allows administrators (or instructors) to create and manage courses, modules, and lessons, and allows users (students) to enroll and interact with the content.
+ **Learning Module System** using the Django framework involves several key components. This kind of system typically allows administrators (or instructors) to create and manage courses, modules, and lessons, and allows users (students) to enroll and interact with the content.
 
-Here’s a **complete logic and structure** to build such a system:
-
----
 
 ## 🎯 **Core Features**
 
