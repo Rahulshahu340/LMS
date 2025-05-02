@@ -249,6 +249,3 @@ admin.site.register(LessonProgress)
 * Add **search & filter** functionality.
 * Integrate a **rich text editor** like CKEditor for lesson content.
 
----
-
-Would you like me to generate boilerplate code or help you scaffold this project step-by-step?
